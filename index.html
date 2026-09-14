@@ -7,6 +7,15 @@
   <meta name="description" content="Premium studio photography, weddings, events, videography, drone coverage and event experiences from BlackCam Photography in Jane Furse, Limpopo.">
   <meta name="theme-color" content="#fbf8f1">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:title" content="BlackCam Photography & Production">
+  <meta property="og:description" content="Premium studio portraits, weddings, events and film from BlackCam in Jane Furse, Limpopo.">
+  <meta property="og:url" content="https://www.blackcam.co.za/">
+  <meta property="og:image" content="https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-6.jpg">
+  <meta property="og:image:alt" content="A styled studio portrait photographed by BlackCam">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="image" href="https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-6.jpg">
   <link rel="canonical" href="https://www.blackcam.co.za/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23fbf8f1'/%3E%3Cpath d='M17 12h19c11 0 18 5 18 14 0 6-3 10-9 12 7 2 10 6 10 12 0 2 0 3-1 4H43c1-1 1-2 1-4 0-5-4-7-10-7h-7v11H17V12zm10 9v14h8c5 0 8-3 8-7s-3-7-8-7h-8z' fill='%231d1d1b'/%3E%3Ccircle cx='49' cy='15' r='4' fill='%23b88a44'/%3E%3C/svg%3E">
   <script type="application/ld+json">
@@ -18,7 +27,7 @@
     "telephone": "+27791073364",
     "email": "info@blackcam.co.za",
     "foundingDate": "2017",
-    "priceRange": "R250–R35000+",
+    "priceRange": "R250-R27500+",
     "description": "Studio photography, weddings, events, videography, drone coverage and event experiences.",
     "address": {
       "@type": "PostalAddress",
@@ -579,6 +588,153 @@
       .secondary-services, .proof-grid { grid-template-columns: 1fr; }
     }
 
+
+    /* Consent-cleared imagery already published on BlackCam's live website. */
+    .slide.photo-slide {
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .slide.photo-slide::before {
+      inset: 0;
+      width: auto;
+      height: auto;
+      aspect-ratio: auto;
+      border: 0;
+      border-radius: 0;
+      background: linear-gradient(180deg, rgba(23, 20, 16, .03) 20%, rgba(23, 20, 16, .58) 100%);
+      box-shadow: none;
+    }
+    .slide.photo-slide::after { display: none; }
+    .slide-studio { background-image: url('https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-6.jpg'); background-position: 55% center; }
+    .slide-wedding { background-image: url('https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-4.jpg'); background-position: 50% center; }
+    .slide-events { background-image: url('https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-5.jpg'); background-position: 58% center; }
+    .photo-slide .slide-number { color: rgba(255, 255, 255, .58); text-shadow: 0 2px 18px rgba(0,0,0,.12); }
+    .photo-slide .slide-copy { background: rgba(255, 253, 248, .9); }
+
+    .studio-art.has-photo { background: #eadfce; }
+    .studio-art.has-photo::before,
+    .studio-art.has-photo::after { display: none; }
+    .studio-art > img {
+      width: 100%;
+      height: 100%;
+      min-height: 38rem;
+      object-fit: cover;
+      object-position: 55% center;
+    }
+    .studio-art.has-photo .art-label { background: rgba(255, 253, 248, .92); }
+
+    .service-card.has-image {
+      color: #fff;
+      background: #777;
+      isolation: isolate;
+    }
+    .service-card.has-image::before,
+    .service-card.has-image::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+    }
+    .service-card.has-image::before {
+      z-index: -2;
+      background-image: var(--service-image);
+      background-position: var(--service-position, center);
+      background-size: cover;
+      transition: transform .55s ease;
+    }
+    .service-card.has-image::after {
+      z-index: -1;
+      background: linear-gradient(180deg, rgba(18, 16, 13, .1), rgba(18, 16, 13, .79));
+    }
+    .service-card.has-image:hover::before { transform: scale(1.025); }
+    .service-card.has-image .service-index,
+    .service-card.has-image p { color: rgba(255, 255, 255, .88); }
+    .service-card.has-image .service-link { color: #fff3dc; }
+    .service-studio { --service-image: url('https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-6.jpg'); --service-position: 55% center; }
+    .service-wedding { --service-image: url('https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-4.jpg'); --service-position: 50% center; }
+    .service-events { --service-image: url('https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-5.jpg'); --service-position: 58% center; }
+
+    .gallery-card {
+      padding: 0;
+      border: 0;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: zoom-in;
+      box-shadow: var(--shadow-soft);
+    }
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s ease;
+    }
+    .gallery-card:hover img { transform: scale(1.018); }
+    .gallery-card:nth-child(1) img { object-position: 55% center; }
+    .gallery-card:nth-child(2) img { object-position: 50% center; }
+    .gallery-card:nth-child(3) {
+      grid-column: span 12;
+      min-height: 32rem;
+    }
+    .gallery-card:nth-child(3) img { object-position: 58% center; }
+    .gallery-meta { pointer-events: none; }
+
+    .lightbox[hidden] { display: none; }
+    .lightbox {
+      position: fixed;
+      z-index: 300;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: clamp(1rem, 4vw, 3rem);
+      background: rgba(24, 21, 17, .88);
+    }
+    .lightbox-figure {
+      position: relative;
+      display: grid;
+      max-width: min(92vw, 76rem);
+      max-height: 90svh;
+      margin: 0;
+      gap: .7rem;
+      color: #fff;
+    }
+    .lightbox img {
+      max-width: 100%;
+      max-height: 82svh;
+      margin: auto;
+      border-radius: .8rem;
+      object-fit: contain;
+      box-shadow: 0 24px 80px rgba(0,0,0,.35);
+    }
+    .lightbox figcaption { text-align: center; }
+    .lightbox-close {
+      position: fixed;
+      z-index: 1;
+      top: 1rem;
+      right: 1rem;
+      display: grid;
+      width: 3rem;
+      height: 3rem;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.5);
+      border-radius: 50%;
+      background: rgba(255,255,255,.94);
+      color: var(--ink);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+    body.lightbox-open { overflow: hidden; }
+
+    @media (max-width: 760px) {
+      .gallery-card,
+      .gallery-card:nth-child(1),
+      .gallery-card:nth-child(2),
+      .gallery-card:nth-child(3) {
+        grid-column: 1 / -1;
+        min-height: 25rem;
+      }
+      .studio-art > img { min-height: 30rem; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
@@ -603,7 +759,7 @@
         <a href="#services">Services</a>
         <a href="#gallery">Work</a>
         <a href="#why-blackcam">Why BlackCam</a>
-        <a class="button button-gold" href="https://docs.google.com/forms/d/1Shk1ovXxBlkowCqVRiPFKyIqHhnJL5DkWtR9ysvofhw/viewform" target="_blank" rel="noopener">Check availability</a>
+        <a class="button button-gold" href="https://wa.me/27791073364?text=Hi%20BlackCam%2C%20I%20would%20like%20to%20check%20availability." target="_blank" rel="noopener">Check availability</a>
       </nav>
     </div>
   </header>
@@ -616,7 +772,7 @@
           <h1 id="hero-title">Studio portraits with presence. Stories with feeling.</h1>
           <p class="lede">BlackCam creates polished photography and film for birthdays, portraits, weddings and events—premium in finish, welcoming in experience.</p>
           <div class="hero-actions">
-            <a class="button button-gold button-arrow" href="https://docs.google.com/forms/d/1Shk1ovXxBlkowCqVRiPFKyIqHhnJL5DkWtR9ysvofhw/viewform" target="_blank" rel="noopener">Book a studio session</a>
+            <a class="button button-gold button-arrow" href="https://wa.me/27791073364?text=Hi%20BlackCam%2C%20I%20would%20like%20to%20book%20a%20studio%20session." target="_blank" rel="noopener">Book a studio session</a>
             <a class="button button-outline" href="#gallery">Explore selected work</a>
           </div>
           <div class="proof-row" aria-label="BlackCam at a glance">
@@ -632,33 +788,24 @@
             <button class="round-control" type="button" data-carousel="next" aria-label="Next slide">→</button>
           </div>
 
-          <article class="slide slide-studio is-active" aria-label="1 of 5: Studio photography">
+          <article class="slide photo-slide slide-studio is-active" role="img" aria-label="1 of 3: BlackCam studio portrait">
             <span class="slide-number" aria-hidden="true">01</span>
             <div class="slide-copy"><span>Flagship service</span><h2>Studio, made personal.</h2><p>Birthdays, portraits, couples, families, maternity and infant sessions shaped around your story.</p></div>
           </article>
-          <article class="slide slide-wedding" aria-label="2 of 5: Wedding photography">
+          <article class="slide photo-slide slide-wedding" role="img" aria-label="2 of 3: BlackCam wedding portrait">
             <span class="slide-number" aria-hidden="true">02</span>
             <div class="slide-copy"><span>Wedding stories</span><h2>Emotion, elegance, memory.</h2><p>Photography and film that hold onto the atmosphere—not only the schedule.</p></div>
           </article>
-          <article class="slide slide-events" aria-label="3 of 5: Event coverage">
+          <article class="slide photo-slide slide-events" role="img" aria-label="3 of 3: BlackCam event portrait">
             <span class="slide-number" aria-hidden="true">03</span>
-            <div class="slide-copy"><span>Events</span><h2>Every entrance. Every reaction.</h2><p>Confident coverage for celebrations, corporate moments and community occasions.</p></div>
+            <div class="slide-copy"><span>Events</span><h2>Every entrance. Every reaction.</h2><p>Confident coverage for celebrations, launches, functions and community occasions.</p></div>
           </article>
-          <article class="slide slide-film" aria-label="4 of 5: Videography and drone coverage">
-            <span class="slide-number" aria-hidden="true">04</span>
-            <div class="slide-copy"><span>Film + aerial</span><h2>Movement changes the story.</h2><p>Cinematic highlights, event video and drone coverage planned as one visual language.</p></div>
-          </article>
-          <article class="slide slide-experience" aria-label="5 of 5: Event experiences">
-            <span class="slide-number" aria-hidden="true">05</span>
-            <div class="slide-copy"><span>Guest experience</span><h2>More than coverage.</h2><p>360 photobooth, displays and selected production add-ons that make the event feel complete.</p></div>
-          </article>
+
 
           <div class="slide-dots" aria-label="Choose a featured slide">
             <button class="slide-dot" type="button" data-slide="0" aria-label="Show studio photography" aria-current="true"></button>
             <button class="slide-dot" type="button" data-slide="1" aria-label="Show wedding photography" aria-current="false"></button>
             <button class="slide-dot" type="button" data-slide="2" aria-label="Show event coverage" aria-current="false"></button>
-            <button class="slide-dot" type="button" data-slide="3" aria-label="Show film and drone" aria-current="false"></button>
-            <button class="slide-dot" type="button" data-slide="4" aria-label="Show event experiences" aria-current="false"></button>
           </div>
         </div>
       </div>
@@ -666,8 +813,9 @@
 
     <section class="section studio-band" id="studio" aria-labelledby="studio-title">
       <div class="container studio-grid">
-        <div class="studio-art reveal" aria-label="Studio portfolio space reserved for an approved BlackCam portrait">
-          <div class="art-label"><strong>Portfolio image held for approval</strong><span>The design is ready; a website-cleared BlackCam studio portrait will replace this art panel.</span></div>
+        <div class="studio-art has-photo reveal">
+          <img src="https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-6.jpg" alt="BlackCam studio portrait of a woman posed in a styled indoor set" decoding="async">
+          <div class="art-label"><strong>Portraits with presence</strong><span>Studio work that feels styled, polished and unmistakably personal.</span></div>
         </div>
         <div class="reveal">
           <p class="eyebrow">BlackCam Studio</p>
@@ -677,7 +825,7 @@
             <span>Birthdays</span><span>Portraits</span><span>Children</span><span>Couples</span><span>Families</span><span>Maternity</span><span>Infants</span><span>Creative setups</span>
           </div>
           <p><strong>Sessions currently start from R250.</strong> Choose a quick walk-in or a fuller signature experience.</p>
-          <a class="button button-gold button-arrow" href="https://docs.google.com/forms/d/1Shk1ovXxBlkowCqVRiPFKyIqHhnJL5DkWtR9ysvofhw/viewform" target="_blank" rel="noopener">Book your studio session</a>
+          <a class="button button-gold button-arrow" href="https://wa.me/27791073364?text=Hi%20BlackCam%2C%20I%20would%20like%20to%20book%20a%20studio%20session." target="_blank" rel="noopener">Book your studio session</a>
         </div>
       </div>
     </section>
@@ -690,19 +838,19 @@
         </div>
 
         <div class="service-grid">
-          <article class="service-card reveal">
+          <article class="service-card service-studio has-image reveal">
             <span class="service-index">01 · Flagship</span>
             <h3>Studio Photography</h3>
             <p>Birthdays, portraits, children, couples, families, maternity, infants and creative studio setups.</p>
             <a class="service-link" href="#studio">Explore studio</a>
           </article>
-          <article class="service-card reveal">
-            <span class="service-index">02 · From R9,500</span>
+          <article class="service-card service-wedding has-image reveal">
+            <span class="service-index">02 · From R5 000</span>
             <h3>Weddings</h3>
             <p>Photo and film packages that scale from essential coverage to full wedding storytelling.</p>
-            <a class="service-link" href="https://docs.google.com/forms/d/1Shk1ovXxBlkowCqVRiPFKyIqHhnJL5DkWtR9ysvofhw/viewform" target="_blank" rel="noopener">Check your date</a>
+            <a class="service-link" href="https://wa.me/27791073364?text=Hi%20BlackCam%2C%20I%20would%20like%20to%20check%20wedding%20availability." target="_blank" rel="noopener">Check your date</a>
           </article>
-          <article class="service-card reveal">
+          <article class="service-card service-events has-image reveal">
             <span class="service-index">03</span>
             <h3>Events</h3>
             <p>Birthdays, celebrations, community occasions and selected corporate coverage.</p>
@@ -725,8 +873,8 @@
         <div class="secondary-services" aria-label="Additional BlackCam services">
           <div class="mini-service reveal"><strong>Drone coverage</strong><span>Aerial perspective where conditions and permissions allow.</span></div>
           <div class="mini-service reveal"><strong>360 photobooth</strong><span>An interactive guest experience for selected events.</span></div>
-          <div class="mini-service reveal"><strong>Event displays</strong><span>65-inch display options for celebrations and weddings.</span></div>
-          <div class="mini-service reveal"><strong>Large-format moments</strong><span>Giant photographs and selected event presentation add-ons.</span></div>
+          <div class="mini-service reveal"><strong>Event displays</strong><span>Projection-screen options for celebrations and weddings.</span></div>
+          <div class="mini-service reveal"><strong>Print & presentation</strong><span>Photobooks, canvas prints, welcome boards and selected event details.</span></div>
         </div>
       </div>
     </section>
@@ -735,7 +883,7 @@
       <div class="container">
         <div class="section-head reveal">
           <div><p class="eyebrow">Selected work</p><h2 id="gallery-title">A tighter portfolio. A stronger impression.</h2></div>
-          <p class="lede">Only categories backed by enough strong current work appear here. More categories will be added when the portfolio—not the menu—justifies them.</p>
+          <p class="lede">A deliberately tight launch edit: studio, weddings and events first. New categories will appear only when strong, consent-cleared work supports them.</p>
         </div>
 
         <div class="gallery-wrap reveal">
@@ -747,21 +895,36 @@
           </div>
 
           <div class="gallery-grid" aria-live="polite">
-            <article class="gallery-card" data-category="studio"><div class="gallery-visual"></div><div class="gallery-meta"><span>Studio</span><strong>Birthday portrait</strong></div></article>
-            <article class="gallery-card" data-category="weddings"><div class="gallery-visual"></div><div class="gallery-meta"><span>Weddings</span><strong>Quiet bridal portrait</strong></div></article>
-            <article class="gallery-card" data-category="events"><div class="gallery-visual"></div><div class="gallery-meta"><span>Events</span><strong>Celebration energy</strong></div></article>
-            <article class="gallery-card" data-category="studio"><div class="gallery-visual"></div><div class="gallery-meta"><span>Studio</span><strong>Creative set</strong></div></article>
-            <article class="gallery-card" data-category="weddings"><div class="gallery-visual"></div><div class="gallery-meta"><span>Weddings</span><strong>Portraits with presence</strong></div></article>
-            <article class="gallery-card" data-category="events"><div class="gallery-visual"></div><div class="gallery-meta"><span>Events</span><strong>People and atmosphere</strong></div></article>
+            <button class="gallery-card" type="button" data-category="studio" data-lightbox-src="https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-6.jpg" data-lightbox-caption="Studio portrait · BlackCam Photography" aria-label="Open BlackCam studio portrait">
+              <img src="https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-6.jpg" alt="BlackCam studio portrait of a woman posed in a styled indoor set" loading="lazy" decoding="async">
+              <span class="gallery-meta"><span>Studio</span><strong>Styled portrait</strong></span>
+            </button>
+            <button class="gallery-card" type="button" data-category="weddings" data-lightbox-src="https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-4.jpg" data-lightbox-caption="Wedding portrait · BlackCam Photography" aria-label="Open BlackCam wedding portrait">
+              <img src="https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-4.jpg" alt="Newlyweds posing outside a light stone building, photographed by BlackCam" loading="lazy" decoding="async">
+              <span class="gallery-meta"><span>Weddings</span><strong>Together, beautifully</strong></span>
+            </button>
+            <button class="gallery-card" type="button" data-category="events" data-lightbox-src="https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-5.jpg" data-lightbox-caption="Event portrait · BlackCam Photography" aria-label="Open BlackCam event portrait">
+              <img src="https://blackcam.co.za/wp-content/themes/blackcam-productions-pro/assets/images/portfolio-5.jpg" alt="BlackCam event portrait of a guest seated beneath green draping" loading="lazy" decoding="async">
+              <span class="gallery-meta"><span>Events</span><strong>People and atmosphere</strong></span>
+            </button>
           </div>
 
           <div class="curation-note" role="note">
             <span aria-hidden="true">◇</span>
-            <div><strong>Consent safeguard:</strong> client photographs are intentionally excluded from this public-source prototype until website-use permission is confirmed. The selected candidates are curated; the final image swap will not alter this layout.</div>
+            <div><strong>Consent safeguard:</strong> this launch set uses only photographs already published on BlackCam’s live website. Additional Library candidates remain withheld until website-use permission is confirmed.</div>
           </div>
         </div>
       </div>
     </section>
+
+
+    <div class="lightbox" id="portfolio-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-caption" hidden>
+      <button class="lightbox-close" type="button" aria-label="Close image preview">×</button>
+      <figure class="lightbox-figure">
+        <img id="lightbox-image" src="" alt="">
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+    </div>
 
     <section class="section proof-section" id="why-blackcam" aria-labelledby="proof-title">
       <div class="container">
@@ -797,7 +960,7 @@
           <h2 id="cta-title">Ready to make the moment look as good as it felt?</h2>
           <p>Share your date, service and location. For studio work, choose the session you want; for events, tell us enough to quote accurately.</p>
           <div class="cta-actions">
-            <a class="button button-light button-arrow" href="https://docs.google.com/forms/d/1Shk1ovXxBlkowCqVRiPFKyIqHhnJL5DkWtR9ysvofhw/viewform" target="_blank" rel="noopener">Check availability</a>
+            <a class="button button-light button-arrow" href="https://wa.me/27791073364?text=Hi%20BlackCam%2C%20I%20would%20like%20to%20check%20availability." target="_blank" rel="noopener">Check availability</a>
             <a class="button" href="https://wa.me/27791073364?text=Hi%20BlackCam%2C%20I%20would%20like%20to%20ask%20about%20a%20booking." target="_blank" rel="noopener">WhatsApp BlackCam</a>
           </div>
         </div>
@@ -821,7 +984,9 @@
           <div class="footer-links">
             <a href="tel:+27791073364">079 107 3364</a>
             <a href="mailto:info@blackcam.co.za">info@blackcam.co.za</a>
-            <a href="https://www.instagram.com/blackcam_photography/" target="_blank" rel="noopener">Instagram @blackcam_photography</a>
+            <a href="https://www.instagram.com/BlackCamPhotography/" target="_blank" rel="noopener">Instagram @BlackCamPhotography</a>
+            <a href="https://www.facebook.com/BlackCamPhotography" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.tiktok.com/@blackcam_photography" target="_blank" rel="noopener">TikTok</a>
             <p>20030 Vergelegen C, Jane Furse Main Road, Limpopo</p>
           </div>
         </div>
@@ -918,6 +1083,41 @@
             card.classList.toggle('is-hidden', filter !== 'all' && card.dataset.category !== filter);
           });
         });
+      });
+
+
+      var lightbox = document.getElementById('portfolio-lightbox');
+      var lightboxImage = document.getElementById('lightbox-image');
+      var lightboxCaption = document.getElementById('lightbox-caption');
+      var lightboxClose = lightbox.querySelector('.lightbox-close');
+      var lastLightboxTrigger = null;
+
+      function openLightbox(card) {
+        lastLightboxTrigger = card;
+        lightboxImage.src = card.dataset.lightboxSrc;
+        lightboxImage.alt = card.querySelector('img').alt;
+        lightboxCaption.textContent = card.dataset.lightboxCaption;
+        lightbox.hidden = false;
+        document.body.classList.add('lightbox-open');
+        lightboxClose.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.hidden = true;
+        lightboxImage.src = '';
+        document.body.classList.remove('lightbox-open');
+        if (lastLightboxTrigger) lastLightboxTrigger.focus();
+      }
+
+      galleryCards.forEach(function (card) {
+        card.addEventListener('click', function () { openLightbox(card); });
+      });
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (event) {
+        if (event.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
       });
 
       var reveals = Array.from(document.querySelectorAll('.reveal'));
